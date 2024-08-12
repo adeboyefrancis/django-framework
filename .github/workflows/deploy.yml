@@ -17,7 +17,7 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-22.04
-    needs: [test-lint]  # Depends on Test and Linting of the docker workflow before pushing
+    needs: [test-lint]  # Depends on Test and Linting Workflow
     steps:
       - name: Checkout
         uses: actions/checkout@v4

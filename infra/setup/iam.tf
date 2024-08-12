@@ -51,18 +51,3 @@ resource "aws_iam_user_policy_attachment" "tf_backend" {
   user       = aws_iam_user.cd.name
   policy_arn = aws_iam_policy.tf_backend.arn
 }
-
-
-#######################################################################
-# Outputs                                                             #
-#######################################################################
-output "cd_user_access_key_id" {
-  description = "Access key ID for CD user"
-  value       = aws_iam_access_key.cd.id
-}
-
-output "cd_user_access_key_secret" {
-  description = "Access key secret for CD user"
-  value       = aws_iam_access_key.cd.secret
-  sensitive   = true
-}
